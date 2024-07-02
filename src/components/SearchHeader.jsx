@@ -1,9 +1,35 @@
+import Image from 'next/image';
+import Link from 'next/link'
 import React from 'react'
+import SearchBox from './SearchBox';
+import { RiSettings3Line } from "react-icons/ri"
+import { TbGridDots } from "react-icons/tb"
 
 export default function SearchHeader() {
   return (
-    <div>
-      serach header
-    </div>
-  )
+    <header className="sticky top-0 bg-white">
+      <div className="flex w-full p-6 items-center justify-between">
+        <Link href="/">
+          <Image
+            priority={true}
+            src="https://cdn.logojoy.com/wp-content/uploads/20230801145608/Current-Google-logo-2015-2023-600x203.png"
+            alt="google-icon"
+            width={300}
+            height={100}
+            style={{ width: "auto" }}
+          />
+        </Link>
+        <div className="flex-1">
+          <SearchBox />
+        </div>
+        <div className="hidden md:inline-flex space-x-2">
+          <RiSettings3Line className="bg-transparent hover:bg-gray-200 p-2 text-4xl rounded-full cursor-pointer " />
+          <TbGridDots className="bg-transparent hover:bg-gray-200 p-2 text-4xl roundedd-full cursor-pointer" />
+        </div>
+        <button className="bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 transition-shadow ml-2">
+          Sign in
+        </button>
+      </div>
+    </header>
+  );
 }
