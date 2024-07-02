@@ -14,8 +14,8 @@ export default function SearchHeader() {
             priority={true}
             src="https://cdn.logojoy.com/wp-content/uploads/20230801145608/Current-Google-logo-2015-2023-600x203.png"
             alt="google-icon"
-            width={300}
-            height={100}
+            width={120}
+            height={40}
             style={{ width: "auto" }}
           />
         </Link>
